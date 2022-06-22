@@ -8,10 +8,10 @@ The challenge was to refactor VBA code that was created for a stock analysis for
 ### Analysis
 To begin the refactoring process I took the original code that looped thourough each indivual ticker then displayed the output of each indivual ticker. By converting each indivual ticker to an array I was able to loop through all of the tickers then display the output of all the tickers at one time. As shown below. 
 
-###Original Code
+### Original Code
 
- 'Loop through tickers
-  For i = 0 To 11
+    'Loop through tickers
+     For i = 0 To 11
        ticker = tickers(i)
        totalVolume = 0
 
@@ -45,9 +45,9 @@ To begin the refactoring process I took the original code that looped thourough 
        Cells(4 + i, 2).Value = totalVolume
        Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
 
-   Next i
+    Next i
 
-###Refactored Code
+### Refactored Code
     
     1b) Create three output arrays
     Dim tickerVolumes(12) As Long
@@ -108,19 +108,19 @@ To begin the refactoring process I took the original code that looped thourough 
 ### Pros and Cons of Refactoring Code
 Refactoring gives us a chance to clean the code so its more organized for a number of reason. Advantages of doing so are it allows for easier debugging it can improve the overall software allowing the code to run bettr and faster. It also allows for other programers to have a better understanding of the code. However there is not always the option to refactor code due to time constraints or the code could be thousands of lines or more and may pose a risk of breaking a function of the code thus increasing the time it would take to refactor all of the code. 
 
-###Outcome of Refactoring
+### Outcome of Refactoring
 As you can see from the screen shots the original code for both 2017 and 2018 took over a second to run where the refactored code took about a quarter of the time to run. 
 
-##Orginal 2017
+## Orginal 2017
 ![Stock Analysis 2017 Run Time](https://user-images.githubusercontent.com/106495422/175051929-322a9e48-1890-4da7-a60d-d901789a6940.png)
 
-##Refactored 2017
+## Refactored 2017
 ![VBA_Challenge_2017](https://user-images.githubusercontent.com/106495422/175052113-8e5058b6-39d4-45ad-a5d4-ceaf209eef30.png)
 
-##Orginal 2018
+## Orginal 2018
 ![Stock Analysis 2018 Run Time](https://user-images.githubusercontent.com/106495422/175052181-13a8190a-9e9a-406f-9569-f3c8322fcf83.png)
 
-##Refactored 2018
+## Refactored 2018
 ![VBA_Challenge_2018](https://user-images.githubusercontent.com/106495422/175052263-6ec8366b-4d1c-455f-8e27-d8de20f83e4b.png)
 
     
